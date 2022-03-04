@@ -1,0 +1,13 @@
+server:
+  port: 9008
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://123.60.218.173:3306/gulimall_pms
+    username: root
+    password: 1234
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
