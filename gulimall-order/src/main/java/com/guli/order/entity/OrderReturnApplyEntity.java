@@ -10,7 +10,7 @@ import lombok.Data;
 
 /**
  * ?????˻????
- * 
+ *
  * @author wangxiaofeng
  * @email 1562200285@qq.com
  * @date 2022-03-04 17:16:14
@@ -100,7 +100,7 @@ public class OrderReturnApplyEntity implements Serializable {
 	/**
 	 * ???
 	 */
-	private String description?;
+	private String description;
 	/**
 	 * ƾ֤ͼƬ???Զ??Ÿ
 	 */

@@ -5,12 +5,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.math.BigDecimal;
 import java.io.Serializable;
-import java.util.Date;
+
 import lombok.Data;
 
 /**
  * ?˿???Ϣ
- * 
+ *
  * @author wangxiaofeng
  * @email 1562200285@qq.com
  * @date 2022-03-04 17:16:14
@@ -46,7 +46,7 @@ public class RefundInfoEntity implements Serializable {
 	 */
 	private Integer refundChannel;
 	/**
-	 * 
+	 *
 	 */
 	private String refundContent;
 
