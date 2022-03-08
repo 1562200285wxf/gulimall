@@ -7,7 +7,7 @@ spring:
     username: root
     password: 1234
   application:
-    name: ware
+    name: gulimall-ware
   cloud:
     nacos:
       discovery:
@@ -16,5 +16,6 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
 
 

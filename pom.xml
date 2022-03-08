@@ -28,6 +28,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.guli</groupId>
+                <artifactId>gulimall-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
             <!-- spring boot 依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>

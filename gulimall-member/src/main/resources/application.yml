@@ -1,21 +1,20 @@
 server:
-  port: 9008
+  port: 9006
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://123.60.218.173:3306/gulimall_ums
     username: root
     password: 1234
-
   application:
-    name: member
+    name: gulimall-member
   cloud:
     nacos:
       discovery:
         server-addr: 123.60.218.173:8848
-        namespace: wxf
+        namespace: 2b40bd63-b11d-4ffb-ae74-bd22decb593e
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
+  mapper-locations: classpath*:mapper/*.xml
 

@@ -1,10 +1,14 @@
 package com.guli.member.controller;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
+import com.guli.member.feign.CouponFeignService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +34,18 @@ import com.guli.common.utils.R;
 public class GrowthChangeHistoryController {
     @Autowired
     private GrowthChangeHistoryService growthChangeHistoryService;
+
+    @Autowired
+    CouponFeignService couponFeignService;
+
+
+    @Value("${foSun.transType:12}")
+    String name;
+
+    @RequestMapping("/test")
+    private String test(){
+        return name;
+    }
 
     /**
      * 列表

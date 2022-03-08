@@ -39,6 +39,9 @@ public class SysGeneratorService {
 
 
     public PageUtils queryList(Query query) {
+
+        query.put("limit",50);
+        query.put("page",1);
         Page<?> page = PageHelper.startPage(query.getPage(), query.getLimit());
         List<Map<String, Object>> list = generatorDao.queryList(query);
         int total = (int) page.getTotal();

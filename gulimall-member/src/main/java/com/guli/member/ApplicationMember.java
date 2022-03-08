@@ -1,7 +1,11 @@
 package com.guli.member;
 
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author ：wang xiaofeng
@@ -9,8 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description：
  */
 @SpringBootApplication
+@EnableFeignClients(basePackages = {"com.guli.member.feign"})
+@EnableDiscoveryClient
 public class ApplicationMember {
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationMember.class,args);
+        ConfigurableListableBeanFactory factory = SpringApplication.run(ApplicationMember.class,args).getBeanFactory();
     }
 }
