@@ -5,11 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * ??Ʒ?
+ * 商品属性
  * 
  * @author wangxiaofeng
  * @email 1562200285@qq.com
- * @date 2022-03-02 23:35:09
+ * @date 2022-03-08 23:43:04
  */
 @Mapper
 public interface AttrDao extends BaseMapper<AttrEntity> {

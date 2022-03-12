@@ -1,16 +1,17 @@
 package com.guli.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.guli.common.utils.PageUtils;
 import com.guli.product.entity.AttrGroupEntity;
 
 import java.util.Map;
-import com.guli.common.utils.PageUtils;
+
 /**
- * ???Է??
+ * 属性分组
  *
  * @author wangxiaofeng
  * @email 1562200285@qq.com
- * @date 2022-03-02 23:35:09
+ * @date 2022-03-08 23:43:04
  */
 public interface AttrGroupService extends IService<AttrGroupEntity> {
 

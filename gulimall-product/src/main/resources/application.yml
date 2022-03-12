@@ -8,11 +8,6 @@ spring:
     password: 1234
   application:
     name: gulimall-product
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 123.60.218.173:8848
-        namespace: wxf
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

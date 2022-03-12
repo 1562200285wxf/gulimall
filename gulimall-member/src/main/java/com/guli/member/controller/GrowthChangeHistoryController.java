@@ -38,13 +38,9 @@ public class GrowthChangeHistoryController {
     @Autowired
     CouponFeignService couponFeignService;
 
-
-    @Value("${foSun.transType:12}")
-    String name;
-
     @RequestMapping("/test")
     private String test(){
-        return name;
+        return growthChangeHistoryService.test();
     }
 
     /**

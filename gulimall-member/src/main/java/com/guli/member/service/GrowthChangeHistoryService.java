@@ -16,5 +16,7 @@ import java.util.Map;
 public interface GrowthChangeHistoryService extends IService<GrowthChangeHistoryEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    String test();
 }
 

@@ -16,6 +16,7 @@
         <module>gulimall-member</module>
         <module>gulimall-order</module>
         <module>renren-fast</module>
+        <module>gulimall-gateway</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

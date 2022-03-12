@@ -1,6 +1,7 @@
 package com.guli.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -16,12 +17,14 @@ import com.guli.product.service.CategoryService;
 import com.guli.common.utils.PageUtils;
 import com.guli.common.utils.R;
 
+
+
 /**
- * ??Ʒ???????
+ * 商品三级分类
  *
  * @author wangxiaofeng
  * @email 1562200285@qq.com
- * @date 2022-03-02 23:35:09
+ * @date 2022-03-08 23:43:04
  */
 @RestController
 @RequestMapping("product/category")
@@ -32,20 +35,26 @@ public class CategoryController {
     /**
      * 列表
      */
-    @RequestMapping("/list")
-    @RequiresPermissions("product:category:list")
+    @RequestMapping("/list/tree")
     public R list(@RequestParam Map<String, Object> params){
+        List<CategoryEntity> tree = categoryService.listWithTree();
+        return R.ok().put("data", tree);
+    }
+    /**
+     * 列表
+     */
+    @RequestMapping("/list")
+    public R listAll(@RequestParam Map<String, Object> params){
+
         PageUtils page = categoryService.queryPage(params);
 
         return R.ok().put("page", page);
     }
 
-
     /**
      * 信息
      */
     @RequestMapping("/info/{catId}")
-    @RequiresPermissions("product:category:info")
     public R info(@PathVariable("catId") Long catId){
 		CategoryEntity category = categoryService.getById(catId);
 
@@ -56,7 +65,6 @@ public class CategoryController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("product:category:save")
     public R save(@RequestBody CategoryEntity category){
 		categoryService.save(category);
 
@@ -67,7 +75,6 @@ public class CategoryController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("product:category:update")
     public R update(@RequestBody CategoryEntity category){
 		categoryService.updateById(category);
 
@@ -78,7 +85,6 @@ public class CategoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("product:category:delete")
     public R delete(@RequestBody Long[] catIds){
 		categoryService.removeByIds(Arrays.asList(catIds));
 

@@ -7,11 +7,11 @@ import com.guli.product.entity.SkuInfoEntity;
 import java.util.Map;
 
 /**
- * sku??Ϣ
+ * sku信息
  *
  * @author wangxiaofeng
  * @email 1562200285@qq.com
- * @date 2022-03-02 23:35:10
+ * @date 2022-03-08 23:43:05
  */
 public interface SkuInfoService extends IService<SkuInfoEntity> {
 

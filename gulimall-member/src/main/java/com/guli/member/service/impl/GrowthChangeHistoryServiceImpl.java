@@ -1,5 +1,6 @@
 package com.guli.member.service.impl;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -25,5 +26,12 @@ public class GrowthChangeHistoryServiceImpl extends ServiceImpl<GrowthChangeHist
 
         return new PageUtils(page);
     }
+    @Value("${foSun.transType:12}")
+    String name;
+
+    public String test(){
+        return name;
+    }
+
 
 }
