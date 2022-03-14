@@ -12,7 +12,7 @@ spring:
     nacos:
       discovery:
         server-addr: 123.60.218.173:8848
-        namespace: wxf
+        namespace: 2b40bd63-b11d-4ffb-ae74-bd22decb593e
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

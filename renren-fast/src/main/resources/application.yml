@@ -4,10 +4,11 @@ server:
     uri-encoding: UTF-8
     max-threads: 1000
     min-spare-threads: 30
-  port: 8080
+  port: 9010
   servlet:
     context-path: /renren-fast
-
+  application:
+    name: renren-fast
 spring:
   profiles:
     active: dev
@@ -35,14 +36,22 @@ spring:
         min-idle: 5       # 连接池中的最小空闲连接
   mvc:
     throw-exception-if-no-handler-found: true
-
+  application:
+    name: renren-fast
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 123.60.218.173:8848
+        namespace: 2b40bd63-b11d-4ffb-ae74-bd22decb593e
 #mybatis
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: io.renren.modules.*.entity
   global-config:
     #数据库相关配置
     db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
       id-type: AUTO
       logic-delete-value: -1
       logic-not-delete-value: 0

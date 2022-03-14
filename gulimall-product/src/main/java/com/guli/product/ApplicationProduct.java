@@ -2,6 +2,7 @@ package com.guli.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author ：wang xiaofeng
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description：
  */
 @SpringBootApplication
+@EnableDiscoveryClient
 public class ApplicationProduct {
     public static void main(String[] args) {
         SpringApplication.run(ApplicationProduct.class,args);
